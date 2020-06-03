@@ -1,0 +1,43 @@
+<html style="height:100%">
+<body style="width:500px;margin: auto">
+<div style="position:relative;width:500px;height:500px">
+<img src="face.jpeg" style="position:absolute;width:500px">
+<img id="hour" src="cat_hour.png" style="position:absolute;top:55px;left:112px;width:279px">
+<img id="minute" src="cat_minute.png" style="position:absolute;width:221px;left:142px;top:30px">
+
+
+</div>
+<center>
+A bit crude but <a href="https://twitter.com/Frollein_Cortex/status/1266644342862761986">it just had to be done...</a> ¯\_(ツ)_/¯
+</center>
+<script>
+var hourElement = document.getElementById("hour");
+var minuteElement = document.getElementById("minute");
+
+var n = 0;
+function update() {
+n++;
+  var d = new Date();
+  let hdeg = 45 + (d.getMinutes() + d.getHours() * 60) / 2;
+  let mdeg = 350 + (d.getSeconds() + d.getMinutes() * 60) / 10; 
+
+console.log("hdeg: ", hdeg, "mdeg: ", mdeg); 
+
+  hourElement.style.transform="rotate(" + hdeg%360 + "deg)";  
+  minuteElement.style.transform="rotate(" + mdeg%360 + "deg)";  
+n++
+}
+
+update();
+
+setInterval(update, 1000);
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
