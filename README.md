@@ -1,3 +1,3 @@
 # Thiara
 
-See https://kobjects.org/cat
+See https://kobjects.org/clock
